@@ -218,8 +218,9 @@ GameObject:
   - component: {fileID: 805387790}
   - component: {fileID: 805387789}
   - component: {fileID: 805387788}
+  - component: {fileID: 805387791}
   m_Layer: 0
-  m_Name: Idle 1
+  m_Name: Death 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -306,13 +307,105 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 805387787}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.7993863, y: -1.1246309, z: 0}
+  m_LocalRotation: {x: 0.006028616, y: 0.9999167, z: 0.00006882486, w: -0.011415411}
+  m_LocalPosition: {x: -3.69, y: -5.59, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.016, y: -178.692, z: 360.691}
+--- !u!60 &805387791
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805387787}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.88, y: 2.88}
+    newSize: {x: 2.88, y: 2.88}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.04, y: -0.83}
+      - {x: 0.16481948, y: -0.69115853}
+      - {x: 0.057294697, y: -0.4619426}
+      - {x: -0.0243482, y: -0.3127984}
+      - {x: -0.08, y: -0.07}
+      - {x: -0.049999997, y: 0.06}
+      - {x: 0.099999994, y: 0.049999997}
+      - {x: 0.19, y: 0.14}
+      - {x: 0.32768884, y: 0.21140113}
+      - {x: 0.2763639, y: 0.4680472}
+      - {x: 0.25047052, y: 0.45604306}
+      - {x: 0.20303395, y: 0.5231767}
+      - {x: 0.06062436, y: 0.6487561}
+      - {x: -0.07, y: 0.74}
+      - {x: 0.019386638, y: 0.90914804}
+      - {x: 0.15133622, y: 0.95542973}
+      - {x: 0.10953997, y: 1.331861}
+      - {x: -0.10363635, y: 1.2938749}
+      - {x: -0.18835708, y: 1.2008559}
+      - {x: -0.5253339, y: 0.8761285}
+      - {x: -0.62292445, y: 0.73054916}
+      - {x: -0.70888275, y: 0.68792164}
+      - {x: -0.8048741, y: 0.69426733}
+      - {x: -0.8853341, y: 0.6061284}
+      - {x: -1.02046, y: 0.511861}
+      - {x: -1.01, y: 0.26999998}
+      - {x: -0.93, y: 0.16}
+      - {x: -0.84, y: 0.07}
+      - {x: -0.56, y: -0.089999996}
+      - {x: -0.6499015, y: -0.40417814}
+      - {x: -0.72573924, y: -0.20511983}
+      - {x: -0.8189156, y: -0.13310501}
+      - {x: -1.0317852, y: 0.054335304}
+      - {x: -1.1524644, y: 0.058688156}
+      - {x: -1.2160461, y: -0.14054534}
+      - {x: -1.1361992, y: -0.26325879}
+      - {x: -1.018357, y: -0.3691442}
+      - {x: -0.94076675, y: -0.44356492}
+      - {x: -0.76183987, y: -0.5525558}
+      - {x: -0.76, y: -0.64}
+      - {x: -0.68, y: -0.74}
+      - {x: -0.58619934, y: -0.8932583}
+      - {x: -0.5483571, y: -0.9191442}
+      - {x: -0.42138, y: -0.9444168}
+      - {x: -0.35, y: -0.76}
+      - {x: -0.20297909, y: -0.95634186}
+      - {x: -0.114928946, y: -0.9326237}
+  m_UseDelaunayMesh: 0
 --- !u!1 &1207780064
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,7 +551,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7.2801275
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -483,7 +576,7 @@ Transform:
   m_GameObject: {fileID: 1541660417}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: -1.98, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
