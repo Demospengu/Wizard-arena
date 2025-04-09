@@ -19,5 +19,10 @@ public class animationController : MonoBehaviour
             animController.SetInteger("control", 1);
 
         }
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            animController.SetInteger("control", 2);
+
+        }
     }
 }
