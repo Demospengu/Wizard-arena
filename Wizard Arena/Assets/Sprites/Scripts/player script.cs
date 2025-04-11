@@ -6,7 +6,7 @@ public class CharacterMovement : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
-
+    public float jumpForce = 1f;
     public HealthBar healthBar;
 
     public float moveSpeed = 5f;
@@ -23,6 +23,12 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+
+        }
 
         float moveInput = Input.GetAxisRaw("Horizontal");
 
