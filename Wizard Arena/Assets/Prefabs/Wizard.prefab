@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 8299111851557966477}
   - component: {fileID: 5511766131691821222}
   - component: {fileID: 993759750840118452}
-  - component: {fileID: 5614641056090900345}
   - component: {fileID: 2365955695540722377}
   m_Layer: 0
   m_Name: Wizard
@@ -149,23 +148,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 268240079870940be8dcaf9b99bc4de4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  healthBar: {fileID: 8047442899882633231, guid: 293280b98d8a94b8a86115907635d212, type: 3}
   moveSpeed: 5
---- !u!114 &5614641056090900345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5284683937226536121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 120cbdf289312415a992dcb6e3f73c3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpForce: 10
-  jumpInterval: 0.5
-  fireballPrefab: {fileID: 2739482085623382681, guid: d1faaff12c5404d559ecf3ae5192e334, type: 3}
-  fireballSpeed: 1
 --- !u!61 &2365955695540722377
 BoxCollider2D:
   m_ObjectHideFlags: 0

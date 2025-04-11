@@ -6,16 +6,25 @@ using UnityEngine.SceneManagement;
 public class PortalTeleport : MonoBehaviour
 {
 
-    public string nextLevelName;
+ 
 
-    private void OnTriggerEnter(Collider other)
-    {
-       if ( other.CompareTag("Player"))
+    void OnTriggerEnter2D(Collider2D hit) {
+
+        if(hit.gameObject.tag == "Portal")
         {
-            SceneManager.LoadScene(nextLevelName);
+            int CSnum = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(CSnum+1);
+
+
 
         }
+
+
     }
+    
+
+        
+    
     // Start is called before the first frame update
     void Start()
     {
