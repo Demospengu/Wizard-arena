@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Portal
   layers:
   - Default
   - TransparentFX
@@ -40,6 +41,9 @@ TagManager:
   m_SortingLayers:
   - name: background
     uniqueID: 1478111113
+    locked: 0
+  - name: Object
+    uniqueID: 2858880261
     locked: 0
   - name: Default
     uniqueID: 0
