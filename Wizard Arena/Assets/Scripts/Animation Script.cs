@@ -38,5 +38,11 @@ public class NewBehaviourScript : MonoBehaviour
 
         }
 
+        if (Input.GetKey(KeyCode.None))
+        {
+            animController.SetInteger("control", 0);
+
+        }
+
     }
 }

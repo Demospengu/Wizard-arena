@@ -9,7 +9,9 @@ public class CharacterMovement : MonoBehaviour
     public float jumpForce = 1f;
     public HealthBar healthBar;
 
-    public float moveSpeed = 5f;
+    private float Move;
+    public float Speed;
+
     private Rigidbody2D rb;
 
     // Start is called before the first frame update
@@ -30,12 +32,9 @@ public class CharacterMovement : MonoBehaviour
 
         }
 
-        float moveInput = Input.GetAxisRaw("Horizontal");
+        float Move = Input.GetAxisRaw("Horizontal");
+        rb.velocity = new Vector2(Move * Speed, rb.velocity.y);
 
-
-
-
-        rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
 
         if (Input.GetKeyDown(KeyCode.K))
