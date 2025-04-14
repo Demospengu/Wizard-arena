@@ -9,8 +9,8 @@ public class CharacterMovement : MonoBehaviour
     public float jumpForce = 1f;
     public HealthBar healthBar;
 
-    private float Move;
-    public float Speed;
+    private float moveInput;
+    public float moveSpeed;
 
     private Rigidbody2D rb;
 
@@ -24,6 +24,7 @@ public class CharacterMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        moveSpeed = 5f;
     }
 
     // Update is called once per frame
@@ -40,7 +41,7 @@ public class CharacterMovement : MonoBehaviour
 
         float moveInput = Input.GetAxisRaw("Horizontal");
 
-
+        rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
         if (Input.GetKeyDown(KeyCode.K))
         {
