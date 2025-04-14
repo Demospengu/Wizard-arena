@@ -14,6 +14,10 @@ public class CharacterMovement : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,13 +31,14 @@ public class CharacterMovement : MonoBehaviour
     {
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
+
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
 
         }
 
-        float Move = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(Move * Speed, rb.velocity.y);
+
+        float moveInput = Input.GetAxisRaw("Horizontal");
 
 
 
@@ -43,15 +48,23 @@ public class CharacterMovement : MonoBehaviour
 
         }
 
-    }
+        
+
+
+        
 
 
 
-    void TakeDamage(int Damage)
-    {
-        currentHealth -= Damage;
 
-        healthBar.SetHealth(currentHealth);
+
+
+
+        void TakeDamage(int Damage)
+        {
+            currentHealth -= Damage;
+
+            healthBar.SetHealth(currentHealth);
+        }
     }
 }
 
