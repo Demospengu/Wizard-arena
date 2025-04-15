@@ -6,7 +6,7 @@ public class CharacterMovement : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
-    public float jumpForce = 1f;
+    public float jumpForce = 10f;
     public HealthBar healthBar;
 
     private float moveInput;
@@ -14,7 +14,14 @@ public class CharacterMovement : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    
+
+    private int jumpCount;
+    public int maxJumps = 2;
+
+    public Transform groundCheck;
+    public float checkRadius = 0.1f;
+    public LayerMask groundLayer;
+    private bool isGrounded;
 
 
 
@@ -31,11 +38,24 @@ public class CharacterMovement : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
 
+
+        // Ground check
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
+
+
+        if (isGrounded)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            jumpCount = maxJumps;
+            
+        }
 
+        // Jump input
+        if (Input.GetKeyDown(KeyCode.UpArrow) && jumpCount > 0)
+        {
+            
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            jumpCount--;
         }
 
 
@@ -50,14 +70,6 @@ public class CharacterMovement : MonoBehaviour
         }
 
         
-
-
-        
-
-
-
-
-
 
 
         void TakeDamage(int Damage)
