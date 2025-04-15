@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 5511766131691821222}
   - component: {fileID: 993759750840118452}
   - component: {fileID: 2365955695540722377}
+  - component: {fileID: 2717321300836325875}
   m_Layer: 0
-  m_Name: Wizard
+  m_Name: Wizard (1)
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 5284683937226536121}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.61, y: -6.49, z: 0.06114558}
+  m_LocalPosition: {x: -4.44, y: -6.28, z: 0.06114558}
   m_LocalScale: {x: 0.9635, y: 0.9635, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -150,6 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
+  jumpForce: 10
   healthBar: {fileID: 8047442899882633231, guid: 293280b98d8a94b8a86115907635d212, type: 3}
   moveSpeed: 5
 --- !u!61 &2365955695540722377
@@ -197,3 +199,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.870238, y: 2.511108}
   m_EdgeRadius: 0
+--- !u!114 &2717321300836325875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5284683937226536121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00c80b2d6fdb44e9e9693067ab7d2635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
