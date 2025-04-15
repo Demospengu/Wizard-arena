@@ -154,6 +154,12 @@ MonoBehaviour:
   jumpForce: 10
   healthBar: {fileID: 8047442899882633231, guid: 293280b98d8a94b8a86115907635d212, type: 3}
   moveSpeed: 5
+  maxJumps: 2
+  groundCheck: {fileID: 2915125671809609052, guid: d7fb2191b2bf24281aec877e950adab3, type: 3}
+  checkRadius: 0.1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!61 &2365955695540722377
 BoxCollider2D:
   m_ObjectHideFlags: 0
