@@ -152,7 +152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e3c3bf14ed04a10b59b25f490df66d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popUps: []
 --- !u!4 &628467257
 Transform:
   m_ObjectHideFlags: 0
@@ -450,7 +449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FollowSpeed: 2
   yOffset: 1
-  target: {fileID: 0}
+  target: {fileID: 4364678611466515096, guid: 7e9f70a65e15b4ccaba21e84954bd4ae, type: 3}
 --- !u!1001 &4411552603916152412
 PrefabInstance:
   m_ObjectHideFlags: 0
