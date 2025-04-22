@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class controller : MonoBehaviour
+
+public class GameController : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
