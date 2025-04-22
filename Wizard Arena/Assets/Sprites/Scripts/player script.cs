@@ -10,11 +10,9 @@ public class CharacterMovement : MonoBehaviour
     public HealthBar healthBar;
 
     private float moveInput;
-    public float moveSpeed;
+    public float moveSpeed = 5f;
 
     private Rigidbody2D rb;
-
-
     private int jumpCount;
     public int maxJumps = 2;
 
@@ -23,15 +21,25 @@ public class CharacterMovement : MonoBehaviour
     public LayerMask groundLayer;
     private bool isGrounded;
 
+    public float FireballSpeed = 20.0f;
+    public GameObject FireballPrefab;
+
+    public GameController controller;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
+        
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
-        moveSpeed = 5f;
+
+        if (controller == null)
+            Debug.LogError("GameController is not assigned!");
+    
+        
     }
 
     // Update is called once per frame
@@ -47,19 +55,19 @@ public class CharacterMovement : MonoBehaviour
         if (isGrounded)
         {
             jumpCount = maxJumps;
-            
+
         }
 
         // Jump input
         if (Input.GetKeyDown(KeyCode.UpArrow) && jumpCount > 0)
         {
-            
+
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             jumpCount--;
         }
 
 
-        float moveInput = Input.GetAxisRaw("Horizontal");
+        moveInput = Input.GetAxisRaw("Horizontal");
 
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
@@ -69,15 +77,42 @@ public class CharacterMovement : MonoBehaviour
 
         }
 
-        
-
-
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            fireShot();
+        }
+    }
+    
         void TakeDamage(int Damage)
         {
             currentHealth -= Damage;
 
             healthBar.SetHealth(currentHealth);
         }
+    
+
+    void OnTriggerCollision2D(Collider2D otherObject)
+    {
+        if (otherObject.gameObject.CompareTag("charge"))
+        {
+            Destroy(otherObject.gameObject);
+        }
+        else if (otherObject.gameObject.CompareTag("Target Dummy"))
+        {
+            controller.IsGameOver();
+        }
+       
+
+
+        
     }
+
+        void fireShot()
+        {
+            GameObject Fireball = (GameObject)Instantiate(FireballPrefab, transform.position, Quaternion.identity);
+
+            Rigidbody2D rb = Fireball.GetComponent<Rigidbody2D>();
+            rb.velocity = new Vector2(FireballSpeed, 0);
+        }
 }
 

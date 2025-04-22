@@ -4,17 +4,12 @@ using UnityEngine;
 
 public class DummyScrpit : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnCollisionEnter(Collision col)
     {
-        
+       if(col.gameObject.name == "Target Dummy")
+        {
+            Destroy(col.gameObject);
+        }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
 
 }
