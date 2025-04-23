@@ -36,8 +36,7 @@ public class CharacterMovement : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
 
-        if (controller == null)
-            Debug.LogError("GameController is not assigned!");
+        
     
         
     }
@@ -97,10 +96,7 @@ public class CharacterMovement : MonoBehaviour
         {
             Destroy(otherObject.gameObject);
         }
-        else if (otherObject.gameObject.CompareTag("Target Dummy"))
-        {
-            controller.IsGameOver();
-        }
+       
        
 
 
